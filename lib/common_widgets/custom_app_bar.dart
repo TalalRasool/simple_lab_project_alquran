@@ -54,6 +54,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           : null,
       title: Text(
         title,
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
         style: AppTextStyles.title.copyWith(color: foreground),
       ),
       actions: actions,

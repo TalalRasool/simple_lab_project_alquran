@@ -46,7 +46,7 @@ class CommonContainer extends StatelessWidget {
         ],
       ),
       child: Material(
-        color: color ?? AppColors.white,
+        color: color ?? AppColors.card,
         borderRadius: radius,
         clipBehavior: Clip.antiAlias,
         child: InkWell(

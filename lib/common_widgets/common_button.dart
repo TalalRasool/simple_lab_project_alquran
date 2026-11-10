@@ -32,8 +32,11 @@ class CommonButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final radius = BorderRadius.circular(14.r);
-    final foreground =
+    final requested =
         foregroundColor ?? (isOutlined ? AppColors.primary : AppColors.white);
+    final foreground = isOutlined && requested == AppColors.primary
+        ? AppColors.icon
+        : requested;
     final label = Text(
       text,
       style: AppTextStyles.button.copyWith(color: foreground),
@@ -54,9 +57,9 @@ class CommonButton extends StatelessWidget {
             onPressed: onPressed,
             style: OutlinedButton.styleFrom(
               foregroundColor: foreground,
-              backgroundColor: backgroundColor ?? AppColors.white,
+              backgroundColor: backgroundColor ?? AppColors.card,
               side: BorderSide(
-                color: borderColor ?? AppColors.primary,
+                color: borderColor ?? AppColors.icon,
                 width: 1.4.w,
               ),
               shape: RoundedRectangleBorder(borderRadius: radius),
