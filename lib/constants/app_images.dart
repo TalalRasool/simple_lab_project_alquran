@@ -16,7 +16,6 @@ class AppImages {
   static const String quran = '$_icons/quran.png';
   static const String hadith = '$_icons/hadith.png';
   static const String tasbih = '$_icons/tasbih.png';
-  static const String qibla = '$_icons/qibla.png';
   static const String more = '$_icons/more.png';
   static const String bookmark = '$_icons/bookmark.png';
   static const String share = '$_icons/share.png';

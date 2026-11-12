@@ -1,5 +1,5 @@
 name: quran_app_1
-description: "Al-Quran — guidance for a better life."
+description: "Noorul Quran — guidance for a better life."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -37,9 +37,10 @@ dependencies:
   firebase_auth: ^6.7.0
   google_sign_in: ^7.2.0
   cloud_firestore: ^6.10.0
-  geolocator: ^14.1.2
+  cloud_functions: ^6.0.4
   shared_preferences: ^2.5.6
-  flutter_compass: ^0.8.1
+  sqflite: ^2.4.2
+  path: ^1.9.1
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +52,16 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^6.0.0
+  sqflite_common_ffi: ^2.3.6
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/images/launcher_icon.png"
+  adaptive_icon_background: "#0D7634"
+  adaptive_icon_foreground: "assets/images/launcher_icon.png"
+  adaptive_icon_foreground_inset: 0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -69,6 +80,11 @@ flutter:
     - assets/quran/arabic/tanzil-uthmani.txt
     - assets/quran/metadata/madinah_hafs.json
     - assets/mushaf/attribution/SOURCES.txt
+    - assets/quran/translations/en-saheeh.jsonl
+    - assets/quran/translations/ur-jalandhry.jsonl
+    - assets/quran/translations/ATTRIBUTION.txt
+    - assets/hadith/kutub.db
+    - assets/hadith/ATTRIBUTION.txt
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

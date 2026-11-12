@@ -79,7 +79,7 @@ class CommonTextField extends StatelessWidget {
         helperStyle: AppTextStyles.caption,
         hintStyle: AppTextStyles.body.copyWith(color: AppColors.textSecondary),
         filled: true,
-        fillColor: AppColors.card,
+        fillColor: AppColors.input,
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
         prefixIconColor: AppColors.accent,
